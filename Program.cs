@@ -163,6 +163,7 @@ class Program
 
 
     //////!Optional Parameters
+    /*
     static void Main(string[] args)
     {
         Add(5, 6, 7);
@@ -183,9 +184,71 @@ class Program
         Console.WriteLine(answer);
 
     }
+    */
+
+    static void Main(string[] args)
+    {
+        Console.WriteLine("What is your name?");
+        string name = Console.ReadLine();
+        char[] nameArray = name.ToCharArray();
 
 
-    public static void Add1(){}
+        Console.WriteLine("What is your second name?");
+        string sName = Console.ReadLine();
+        char[] sNameArray = sName.ToCharArray();
+
+        
+
+
+        Console.WriteLine("Where do you live?");
+        string city = Console.ReadLine();
+        char[] cityArray = city.ToCharArray();
+
+        
+
+        ReversePrint(nameArray);
+        ReversePrint(sNameArray);
+        ReversePrint(cityArray);
+
+
+        /*  Code without method
+        Array.Reverse(sNameArray);
+        Array.Reverse(nameArray);
+        Array.Reverse(cityArray);
+
+        string result = "";
+        foreach (char person in nameArray)
+        {
+            result += person;
+        }
+        result += ", ";
+
+        foreach (char person in sNameArray)
+        {
+            result += person;
+        }
+        result += ", ";
+
+        foreach (char person in cityArray)
+        {
+            result += person;
+        }
+        result += '.';
+        Console.WriteLine(result);
+        */
+
+    }
+
+    private static void ReversePrint(char[] array)
+    {
+        Array.Reverse(array);
+        foreach (char a in array)
+        {
+            Console.Write(a);
+        }
+        Console.Write(" ");
+    }
+   
 
 
 }
